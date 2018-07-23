@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xmlns:util="http://www.springframework.org/schema/util"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        
+        <!-- X3ML Mappings file bean -->
+        <bean id="x3ml_mappings_bean" class="java.io.File">
+            <constructor-arg index="0" value="x3ml_resources/mappings.x3ml"/>
+        </bean>
+		
+		<!-- Generator Policy file bean -->
+        <bean id="generator_policy_bean" class="java.io.File">
+            <constructor-arg index="0" value="x3ml_resources/generator-policy.xml"/>
+        </bean>
+		
+		<!-- UUID size bean -->
+        <bean id="uuid_size_bean" class="java.lang.Integer">
+            <constructor-arg index="0" value="-1"/>
+        </bean>
+		
+		<!-- Source contents folder bean -->
+        <bean id="source_files_bean" class="java.io.File">
+            <constructor-arg index="0" value="from"/>
+        </bean>
+		
+		<!-- Transformed contents folder bean -->
+        <bean id="transformed_files_bean" class="java.io.File">
+            <constructor-arg index="0" value="to"/>
+        </bean>
+    </beans>
